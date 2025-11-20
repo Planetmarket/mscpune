@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maharashtra Software Club</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* ---------- Reset ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:#333; background:#fff; }
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #1a2b5c;
+  color: #fff;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+header .logo-section { display:flex; align-items:flex-start; gap:12px; }
+header .logo-section img {align-items: baseline ; height:85px; width:70px; object-fit:cover; margin-top: 3px; }
+header .logo-text { display:flex; flex-direction:column; font-weight:bold; font-size:14px; text-transform:uppercase; }
+header .logo-text .location { display: flex;     font-size:10px; font-weight:400; color:#ffd700; margin-top:4px; }
+.contact-btn {
+  background:#ffd700; color:#000; padding:8px 12px; border-radius:4px;
+  text-decoration:none; font-weight:bold; display:flex; align-items:center; gap:6px;
+  transition: background 0.3s;
+}
+.contact-btn:hover { background:#e6c200; }
+
+/* ---------- Hero ---------- */
+.hero { padding: 80px 20px; color:#fff; text-align:center; position:relative; overflow:hidden; min-height:500px; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+.hero-bg { position:absolute; top:0; left:0; width:100%; height:100%; background:url('bg.jpg') center/cover no-repeat; filter:brightness(0.7); z-index:0; animation: moveBG 25s linear infinite; }
+@keyframes moveBG { 0% { transform: scale(1) translate(0,0); } 50% { transform: scale(1.1) translate(10px,10px); } 100% { transform: scale(1) translate(0,0); } }
+.hero-content { position:relative; z-index:1; max-width:800px; padding:0 20px; }
+.hero h2, .hero p { line-height:1.2; text-shadow:0 2px 4px rgba(0,0,0,0.5); }
+.hero h2 { margin-bottom:20px; font-size:35px; font-weight:bold; }
+.hero p { font-size:25px; margin-top:10px; }
+
+/* ---------- Members ---------- */
+.members { padding:20px; background:#f8f9fa; }
+.section-title { text-align:center; margin-bottom:30px; color:#000; font-size:24px; font-weight:500; }
+.grid { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; }
+.card {
+  background:#fff; border-radius:0px; border:1px solid #cbd3f9;
+  text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform:translateY(-5px); box-shadow:0 8px 15px rgba(0,0,0,0.1); }
+.photo { width:100%; aspect-ratio:1; background:#d0d8ff; border-top-left-radius:8px; border-top-right-radius:8px; background-size:cover; background-position:center; cursor:pointer; transition: transform 0.3s; }
+.photo:hover { transform:scale(1.03); }
+.name { font-weight:bold; font-size:16px; color:#000; margin:8px 0 4px 0; }
+.description { font-size:14px; color:#1a2b5c; margin-bottom:8px; }
+
+/* ---------- Fullscreen Preview ---------- */
+.fullscreen-preview { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:2000; cursor:pointer; }
+.fullscreen-preview img { max-width:90%; max-height:90%; border-radius:0px; box-shadow:0 5px 25px rgba(0,0,0,0.5); }
+.close-preview { position:absolute; top:20px; right:30px; color:white; font-size:40px; cursor:pointer; z-index:2001; }
+
+/* ---------- Footer ---------- */
+footer { text-align:center; padding:30px 20px; background:#1a2b5c; color:#fff; font-size:14px; }
+.footer-location { color:#ffd700; font-size:13px; margin-top:5px; }
+
+/* ---------- Responsive ---------- */
+@media(min-width:480px){.grid{grid-template-columns:repeat(3,1fr);}.hero h2{font-size:42px;}.hero p{font-size:18px;}}
+@media(min-width:768px){.grid{grid-template-columns:repeat(4,1fr);}.hero h2{font-size:56px;}.hero p{font-size:22px;}}
+@media(min-width:1024px){.grid{grid-template-columns:repeat(5,1fr);}.hero h2{font-size:72px;}.hero p{font-size:26px;}}
+@media(min-width:1400px){.grid{grid-template-columns:repeat(6,1fr);}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-section">
+    <img src="icon.jpg" alt="Logo">
+    <div class="logo-text">
+      <span>Maharashtra</span>
+      <span>Software</span>
+      <span>Club</span>
+      <span class="location"> Pune</span>
+    </div>
+  </div>
+  <a class="contact-btn"  href="https://wa.me/917385334043?text=Hi%2C%20its%20regarding%2C%20Maharashtra%20Software%20Club%20!"  target="_blank"><i class="fab fa-whatsapp"></i> Contact</a>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h2>We not accept life without power and resources.</h2>
+    <p>You believe in big dreams! Then connect with us</p>
+  </div>
+</section>
+
+<section class="members">
+  <h2 class="section-title">Pimpri Chinchwad / Pune</h2>
+  <div class="grid" id="memberGrid"></div>
+</section>
+
+<div class="fullscreen-preview" id="fullscreenPreview">
+  <span class="close-preview">&times;</span>
+  <img src="" id="previewImg" alt="Preview">
+</div>
+
+<footer>
+  <p>&copy; 2024 Maharashtra Software Club. All rights reserved.</p>
+  <p class="footer-location" Pune, Maharashtra</p>
+</footer>
+
+<script>
+async function loadMembers(){
+  const grid = document.getElementById('memberGrid');
+  const placeholder = 'images/placeholder.jpg';
+  let members = [];
+
+  try{
+    const res = await fetch('data.txt');
+    const text = await res.text();
+    text.split('\n').forEach(line=>{
+      line = line.trim();
+      if(!line) return;
+      let m;
+      if(m = line.match(/^name(\d+)="(.+)"$/)){
+        const idx = parseInt(m[1])-1;
+        members[idx] = members[idx] || {};
+        members[idx].name = m[2];
+      }
+      if(m = line.match(/^desc(\d+)="(.+)"$/)){
+        const idx = parseInt(m[1])-1;
+        members[idx] = members[idx] || {};
+        members[idx].description = m[2];
+      }
+    });
+  }catch(e){ console.error('Failed to load data.txt', e); }
+
+  // Fill in missing props
+  members.forEach((member, idx)=>{
+    if(!member) member={};
+    member.name = member.name || 'Anonymous';
+    member.description = member.description || 'Description not available';
+    member.photo = `images/grid${idx+1}.jpg`; // dynamic photo
+  });
+
+  // Render
+  members.forEach(member=>{
+    const card = document.createElement('div'); card.className='card';
+    const photo = document.createElement('div'); photo.className='photo';
+    const img = new Image();
+    img.onload = ()=>{ photo.style.backgroundImage = `url('${member.photo}')`; }
+    img.onerror = ()=>{ photo.style.backgroundImage = `url('${placeholder}')`; }
+    img.src = member.photo;
+    photo.onclick = ()=>showPreview(member.photo);
+    card.appendChild(photo);
+    const name = document.createElement('div'); name.className='name'; name.textContent = member.name; card.appendChild(name);
+    const desc = document.createElement('div'); desc.className='description'; desc.textContent = member.description; card.appendChild(desc);
+    grid.appendChild(card);
+  });
+}
+
+function showPreview(url){
+  const preview = document.getElementById('fullscreenPreview');
+  const img = document.getElementById('previewImg');
+  img.src = url;
+  preview.style.display = 'flex';
+}
+
+document.getElementById('fullscreenPreview').addEventListener('click', e=>{
+  if(e.target===e.currentTarget || e.target.classList.contains('close-preview')){
+    e.currentTarget.style.display='none';
+  }
+});
+
+document.addEventListener('DOMContentLoaded', loadMembers);
+</script>
+</body>
+</html>

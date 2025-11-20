@@ -1,0 +1,9 @@
+name1="Panda"
+desc1="JR Developer"
+
+name2="Akash"
+desc2="Frontend Developer"
+
+...
+name18="Deepak"
+desc18="System Administrator"
