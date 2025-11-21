@@ -1,8 +1,8 @@
 name1="Prathmesh Chavan"
-desc1="24 /non-technical"
+desc1="24/non-technical"
 
 name2="Dattatray karkare"
-desc2="non-technical"
+desc2="26/non-technical"
 
 name3="member"
 desc3="about"
