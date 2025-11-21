@@ -1,5 +1,5 @@
 name1="Prathmesh Chavan"
-desc1="non-technical"
+desc1="24 /non-technical"
 
 name2="Dattatray karkare"
 desc2="non-technical"
