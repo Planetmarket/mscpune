@@ -1,10 +1,13 @@
-name1="Prathmesh Chavan"
-desc1="24/non-technical"
 
-name2="Dattatray karkare"
-desc2="26/non-technical"
+name1="Dattatray karkare"
+desc1="26/non-technical"
 
-name3="Sriram Vilevati"
+name2="Prathmesh Chavan"
+desc2="24/non-technical"
+
+
+
+name3="Sriram Velivati"
 desc3="Experienced Developer"
 
 name4="member"
